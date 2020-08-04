@@ -1,0 +1,43 @@
+{
+    "terminal.explorerKind": "external",
+    "terminal.integrated.allowChords": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.tree.indent": 12,
+    "workbench.colorCustomizations": {
+        "editor.background": "#0a0a0a",
+    },
+    "editor.tokenColorCustomizations": {
+        "strings"  : "#10c070",
+        "types"    : "#2080E0",
+        "keywords" : "#00f0ff",
+        "comments" : "#b00000",
+        "functions": "#2080E0",
+        "variables": "#e0e0b0",
+    },
+    "multiCommand.commands": [
+        {
+            "command": "ctrl+k",
+            "sequence":[
+                "cursorEndSelect",
+                "editor.action.clipboardCutAction",
+            ],
+        },
+        {
+            "command": "ctrl+s",
+            "sequence":[
+                "actions.find",
+                "editor.action.nextMatchFindAction",
+            ],
+        },
+        {
+            "command": "ctrl+r",
+            "sequence":[
+                "actions.find",
+                "editor.action.previousMatchFindAction",
+            ],
+        },
+    ],
+}
