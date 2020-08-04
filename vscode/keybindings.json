@@ -1,0 +1,250 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+    {
+        "key": "ctrl+a",
+        "command": "cursorHome",
+    },
+    {
+        "key": "ctrl+e",
+        "command": "cursorEnd",
+    },
+    {
+        "key": "ctrl+f",
+        "command": "cursorRight",
+    },
+    {
+        "key": "ctrl+b",
+        "command": "cursorLeft",
+    },
+    {
+        "key": "ctrl+n",
+        "command": "cursorDown",
+    },
+    {
+        "key": "ctrl+p",
+        "command": "cursorUp",
+    },
+    {
+        "key": "alt+n",
+        "command": "cursorPageDown",
+    },
+    {
+        "key": "alt+p",
+        "command": "cursorPageUp",
+    },
+
+
+
+    {
+        "key": "ctrl+shift+a",
+        "command": "cursorHomeSelect",
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "cursorEndSelect",
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "cursorRightSelect",
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "cursorLeftSelect",
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "cursorDownSelect",
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "cursorUpSelect",
+    },
+    {
+        "key": "alt+shift+n",
+        "command": "cursorPageDownSelect",
+    },
+    {
+        "key": "alt+shift+p",
+        "command": "cursorPageUpSelect",
+    },
+
+
+
+    {
+        "key": "ctrl+f",
+        "command": "selectNextPageSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWudgetVisible && textInputFocus",
+    },
+    {
+        "key": "ctrl+b",
+        "command": "selectPrevPageSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWudgetVisible && textInputFocus",
+    },
+    {
+        "key": "ctrl+n",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWudgetVisible && textInputFocus",
+    },
+    {
+        "key": "ctrl+p",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWudgetVisible && textInputFocus",
+    },
+
+
+
+    {
+        "key": "ctrl+d",
+        "command": "deleteRight",
+    },
+    {
+        "key": "ctrl+h",
+        "command": "deleteLeft",
+    },
+
+
+
+    {
+        "key": "ctrl+k",
+        "command": "ctrl+k",
+    },
+    {
+        "key": "alt+w",
+        "command": "editor.action.clipboardCopyAction",   
+    },
+    {
+        "key": "ctrl+w",
+        "command": "editor.action.clipboardCutAction",   
+    },  
+    {
+        "key": "ctrl+y",
+        "command": "editor.action.clipboardPasteAction",
+    },
+    {
+        "key": "ctrl+alt+a",
+        "command": "editor.action.selectAll"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "cancelSelection",   
+        "when": "editorHasSelection && textInputFocus",
+    }, 
+
+
+
+    {
+        "key": "ctrl+x ctrl+c",
+        "command": "workbench.action.closeActiveEditor",   
+    }, 
+    {
+        "key": "ctrl+x ctrl+s",
+        "command": "workbench.action.files.save",
+    },
+    {
+        "key": "ctrl+u",
+        "command": "undo",   
+    }, 
+    {
+        "key": "ctrl+alt+y",
+        "command": "redo",   
+    }, 
+
+
+
+    {
+        "key": "ctrl+s",
+        "command": "ctrl+s",
+    }, 
+    {
+        "key": "ctrl+r",
+        "command": "ctrl+r",
+    },
+    {
+        "key": "ctrl+q",
+        "command": "editor.action.startFindReplaceAction",   
+    },  
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.gotoLine",
+    },
+    {
+        "key": "ctrl+i",
+        "command": "toggleSuggestionDetails",   
+        "when": "suggestWidgetVisible && textInputFocus",
+    },  
+
+
+
+
+
+
+    {
+        "key": "ctrl+a",
+        "command": "-editor.action.selectAll",   
+        "when": "textInputFocus",
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-editor.action.webvieweditor.select.All",   
+        "when": "!textInputFocus && !inputFocus && activeEditor == 'WebvieweEditor'",
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-list.select.All",   
+        "when": "listFocus && listSupportsMultiselect && !inputFocus",
+    },
+    {
+        "key": "ctrl+s",
+        "command": "-workbench.action.files.save",   
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-action.find",
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.gotoLine",   
+    },   
+    {
+        "key": "ctrl+h",
+        "command": "-editor.action.startFindReplaceAction",   
+    },  
+    {
+        "key": "ctrl+home",
+        "command": "-workbench.action.terminal.scrollToTop",   
+    },
+    {
+        "key": "ctrl+y",
+        "command": "-redo", 
+        "when": "textInputFocus && !editorReadonly",
+    },  
+    {
+        "key": "ctrl+x",
+        "command": "-editor.action.clipboardCutAction", 
+        "when": "textInputFocus && !editorReadonly",
+    },   
+    {
+        "key": "ctrl+c",
+        "command": "-editor.action.clipboardCopyAction", 
+        "when": "textInputFocus",
+    },
+    {
+        "key": "ctrl+space",
+        "command": "-editor.action.triggerSuggest", 
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly",
+    },
+    {
+        "key": "ctrl+space",
+        "command": "-toggleSuggestionDetails",
+        "when": "suggestWidgetVisible && textInputFocus",
+    },
+    {
+        "key": "ctrl+m",
+        "command": "-editor.action.toggleTabFocusMode",
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openFile"
+    }
+
+]
