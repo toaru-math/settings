@@ -47,6 +47,9 @@ def configure(keymap):
     if 1:
         keymap_global[ "C-O" ]   = "243"   # Zenkaku-Hankaku
         keymap_global[ "C-A-O" ] = "243"   # Zenkaku-Hankaku
+        keymap_global[ "C-A-G" ] = "W-G"   # Window Capture
+        #keymap_global[ "C-A-L" ] = "W-L"   # Lock
+
         def istarget(window):
             if window.getProcessName() in ("Code.exe"):
                 return False
@@ -63,7 +66,7 @@ def configure(keymap):
         keymap_edit[ "C-K" ] = "S-End","C-X"         # Removing following text
 
         keymap_edit[ "C-P" ] = "Up"                  # Move cursor up
-        keymap_edit[ "C-N" ] = "Down"                # Move cursor down
+        keymap_edit[ "C-N" ] = "Down"                # Move cursor downlll
         keymap_edit[ "C-F" ] = "Right"               # Move cursor right
         keymap_edit[ "C-B" ] = "Left"                # Move cursor left
 
@@ -127,14 +130,22 @@ def configure(keymap):
                     ( "  Gmail     ", keymap.ShellExecuteCommand( None, "https://mail.google.com/mail/u/0/#inbox", "", "" ) ),
                 ]
                 websites2 = [
-                    ( "  Google    ", keymap.ShellExecuteCommand( None, "https://www.google.co.jp/", "", "" ) ),
-                    ( "  YouTube   ", keymap.ShellExecuteCommand( None, "https://www.youtube.com/", "", "" ) ),
-                    ( "  Gmail     ", keymap.ShellExecuteCommand( None, "https://mail.google.com/mail/u/0/#inbox", "", "" ) ),
+                    ( "  JMO       ", keymap.ShellExecuteCommand( None, "https://www.imojp.org/domestic/jmo_overview.html", "", "" ) ),
+                    ( "  JJMO      ", keymap.ShellExecuteCommand( None, "https://www.imojp.org/domestic/jjmo_overview.html", "", "" ) ),
+                    ( "  AoPS      ", keymap.ShellExecuteCommand( None, "https://artofproblemsolving.com/community/c13_contests", "", "" ) ),
+                ]
+                websites3 = [
+                    ( "  Twitter   ", keymap.ShellExecuteCommand( None, "https://twitter.com/home", "", "" ) ),
+                    ( "  note      ", keymap.ShellExecuteCommand( None, "https://note.com/sitesettings/stats", "", "" ) ),
+                    ( "  studytube ", keymap.ShellExecuteCommand( None, "https://studytube.info/", "", "" ) ),
+                    ( "  yutura    ", keymap.ShellExecuteCommand( None, "https://ytranking.net/channel/21278/", "", "" ) ),
                 ]
 
                 listers = [
-                    ( "[Web] 1", cblister_FixedPhrase(websites1) ),
-                    ( "[Web] 2", cblister_FixedPhrase(websites2) ),
+                    ( "[Web] General", cblister_FixedPhrase(websites1) ),
+                    ( "[Web] Math   ", cblister_FixedPhrase(websites2) ),
+                    ( "[Web] Ads    ", cblister_FixedPhrase(websites3) ),
+
                 ]
 
                 item, mod = keymap.popListWindow(listers)
@@ -150,7 +161,7 @@ def configure(keymap):
         #keymap_global[ "C-A-W" ] = command_PopDirectoryList
         keymap_global[ "C-A-S" ] = command_PopWebpageList
 
-        vscode = "C:\\Users\\USER_NAME\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+        vscode = "C:\\Users\\T\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
         keymap_global[ "C-A-V" ] = keymap.ShellExecuteCommand( None, vscode, "", "" )
 
 
